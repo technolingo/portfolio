@@ -1,0 +1,107 @@
+{% extends "base.html" %}{% load static i18n %}
+
+{% block content %}
+
+  <section id="header" class="header first-section">
+    <h1 class="large-text">{% trans "Hi, I'm Zilong, a full-stack web developer." %}</h1>
+    <p class="medium-text">{% trans "I build, deploy, & maintain production-ready full-stack web applications." %}</p>
+    <p class="medium-text">{% trans "I am a fast-learner, hard-worker, & creative problem-solver." %}</p>
+    <p class="medium-text">{% trans "Say hello" %}: <a class="email-link" href="mailto:hi@zilongli.com">hi@zilongli.com</a></p>
+    <div class="scroll-down-div">
+      <a class="scroll-down smooth-scroll" href="#project-1">
+        <svg class="clickable" version="1.0" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon points="0.645,10.383 16,23.871 31.355,10.383 29.375,8.129 16,19.878 2.625,8.129 "></polygon></svg>
+      </a>
+    </div>
+  </section>
+
+  <section id="project-1" class="projects middle-section">
+    <div class="row">
+      <div class="col-md-7 visual">
+        <a href="https://www.lingodream.com/" target="_blank"><img src="{% static 'images/projects/lingodream_screenshot.png' %}" alt=""></a>
+      </div>
+      <div class="col-md-5 description">
+        <h2 class="project-title">LingoDream</h2>
+        <p class="project-text">{% trans "A web app that helps language learners read texts in foreign languages." %}</p>
+        <p class="technologies"><strong>{% trans "Frontend" %}: </strong>
+          <span class="badge badge-info">HTML5</span>
+          <span class="badge badge-info">CSS3</span>
+          <span class="badge badge-info">Javascript</span>
+          <span class="badge badge-info">jQuery</span>
+          <span class="badge badge-info">Bootstrap</span>
+          <span class="badge badge-info">Ajax</span>
+        </p>
+        <p class="technologies"><strong>{% trans "Backend" %}: </strong>
+          <span class="badge badge-primary">Python</span>
+          <span class="badge badge-primary">Django</span>
+          <span class="badge badge-primary">PostgreSQL</span>
+          <span class="badge badge-primary">ReSTful APIs</span>
+          <span class="badge badge-primary">RegExp</span>
+          <span class="badge badge-primary">Django-Rest-Framework</span>
+          <span class="badge badge-primary">Email Integration</span>
+          <span class="badge badge-primary">Payment Integration</span>
+          <span class="badge badge-primary">Ruby</span>
+          <span class="badge badge-primary">Token Authentication</span>
+          <span class="badge badge-primary">Web Scraping</span>
+          <span class="badge badge-primary">Unit Testing</span>
+        </p>
+        <p class="technologies"><strong>{% trans "Cloud" %}: </strong>
+          <span class="badge badge-success">Amazon Web Services (AWS)</span>
+          <span class="badge badge-success">Azure Cognitive Services</span>
+          <span class="badge badge-success">Content Delivery Networks (CDN)</span>
+          <span class="badge badge-success">Heroku</span>
+        </p>
+        <p class="technologies"><strong>{% trans "Other" %}: </strong>
+          <span class="badge badge-secondary">Chrome Extension</span>
+          <span class="badge badge-secondary">Firefox Add-on</span>
+          <span class="badge badge-secondary">Command Line</span>
+          <span class="badge badge-secondary">Linux</span>
+          <span class="badge badge-secondary">Atom</span>
+          <span class="badge badge-secondary">VS Code</span>
+          <span class="badge badge-secondary">PyCharm</span>
+          <span class="badge badge-secondary">Docker</span>
+          <span class="badge badge-secondary">Git</span>
+        </p>
+        <a class="btn btn-outline-primary project-link" href="https://www.lingodream.com/" target="_blank">{% trans "Teleport" %}</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="project-2" class="projects middle-section">
+    <div class="row">
+      <div class="col-md-5 description">
+
+      </div>
+      <div class="col-md-7 visual">
+
+      </div>
+    </div>
+  </section>
+
+  <section id="project-3" class="projects middle-section">
+    <div class="row">
+      <div class="col-md-5 description">
+
+      </div>
+      <div class="col-md-7 visual">
+
+      </div>
+    </div>
+  </section>
+
+  <section id="featured-posts" class="featured-posts middle-section">
+
+  </section>
+
+  <section id="about-me" class="about-me last-section">
+    <div class="row">
+      <div class="col-md-6 description">
+
+      </div>
+      <div class="col-md-6 visual">
+        <img src="{% static 'images/me/2016_photo.jpg' %}" alt="">
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}

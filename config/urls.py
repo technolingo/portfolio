@@ -6,12 +6,7 @@ from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path(
-        "about/",
-        TemplateView.as_view(template_name="pages/about.html"),
-        name="about",
-    ),
+    path("", TemplateView.as_view(template_name="sitepages/index.html"), name="home"),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
@@ -46,7 +41,3 @@ if settings.DEBUG:
         ),
         path("500/", default_views.server_error),
     ]
-    if "debug_toolbar" in settings.INSTALLED_APPS:
-        import debug_toolbar
-
-        urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns

@@ -1,0 +1,20 @@
+{% load i18n %}
+<div class="footer-div">
+  <div class="container">
+    <!-- footer links -->
+    <div class="row">
+      <div class="col-md-5 copyright">
+        {% now "Y" as current_year %}
+       <p>Copyright © {{current_year}} Zilong Li</p>
+      </div>
+      <div class="col-md-7 footer-links">
+        <div class="float-right">
+          <a href="" class="bottom-link">{% trans "Blog" %}</a>
+          <a href="#project-1" class="bottom-link smooth-scroll">{% trans "Projects" %}</a>
+          <a href="" class="bottom-link">{% trans "CV" %}</a>
+          <a href="" class="scroll-to-top">{% trans "Back to Top" %}</a>
+        </div>
+      </div>
+    </div> <!-- footer links -->
+  </div> <!-- container -->
+</div> <!-- footer-div -->

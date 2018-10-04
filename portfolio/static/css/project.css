@@ -11,3 +11,142 @@
   background-color: #f2dede;
   border-color: #eed3d7;
 }
+
+.first-section {
+  height: 80vh;
+}
+
+.middle-section {
+  height: 100vh;
+  border-top: 1px solid gray;
+}
+
+.last-section {
+  height: 90vh;
+  border-top: 1px solid gray;
+  border: 1px solid purple;
+}
+
+::selection {
+  color: white;
+  background: #0059FF; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: white;
+  background: #0059FF; /* Gecko Browsers */
+}
+
+nav {
+  border-top: solid 2px #0059FF;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.active a {
+  color: #0059FF !important;
+}
+
+.nav-link {
+  font-size: 1.125rem;
+}
+
+.nav-link:hover {
+  color: #0059FF !important;
+}
+
+.email-link {
+  color: #0059FF;
+  text-decoration:none !important;
+}
+
+.email-link:hover {
+  color: blue;
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+
+}
+
+.brand-subtitle {
+  color: gray;
+}
+
+.large-text {
+  font-size: 2.82rem;
+  font-weight: 500;
+}
+
+.medium-text {
+  font-size: 1.625rem;
+}
+
+.header {
+  padding-top: 120px;
+}
+
+.scroll-down-div {
+  padding-top: 30px;
+}
+
+.clickable {
+  height: 2rem;
+  overflow: hidden;
+}
+
+.projects .visual {
+  height: 100vh;
+  padding-top: 120px;
+  padding-left: 0px;
+  padding-right: 20px;
+}
+
+.projects .visual img {
+  margin: 0px;
+  width: 100%;
+}
+
+.about-me .visual img {
+  margin: 0px;
+  width: 100%;
+}
+
+.description {
+  padding-top: 100px;
+  padding-left: 20px;
+  height: 100vh;
+}
+
+.project-title {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+.project-text {
+  font-size: 1.5rem;
+}
+
+.project-link {
+  margin-top: 30px;
+  min-width: 120px;
+}
+
+.footer-div {
+  padding-top: 20px;
+  background-color: gray;
+}
+
+.footer-links a {
+  text-decoration: none !important;
+  color: white;
+}
+
+.footer-links a:hover {
+  color: black;
+}
+
+.bottom-link {
+  margin-right: 20px;
+}
