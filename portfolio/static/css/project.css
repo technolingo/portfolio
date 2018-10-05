@@ -1,30 +1,24 @@
-/* These styles are generated from project.scss. */
+/* Colour Scheme: white, black, #0059FF;, blue, grey, */
 
-.alert-debug {
-  color: black;
-  background-color: white;
-  border-color: #d6e9c6;
+/* *********************************** */
+/*                GENERAL              */
+/* *********************************** */
+
+html, body {
+  margin: 0px;
+  padding: 0px;
 }
-
-.alert-error {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
-}
-
 .first-section {
   height: 80vh;
 }
-
 .middle-section {
   height: 100vh;
   border-top: 1px solid gray;
 }
 
 .last-section {
-  height: 90vh;
+  height: 92vh;
   border-top: 1px solid gray;
-  border: 1px solid purple;
 }
 
 ::selection {
@@ -36,12 +30,27 @@
   background: #0059FF; /* Gecko Browsers */
 }
 
+.large-text {
+  font-size: 2.82rem;
+  font-weight: 500;
+}
+
+.medium-text {
+  font-size: 1.625rem;
+}
+
+
+
+/* *********************************** */
+/*             NAVIGATION              */
+/* *********************************** */
+
 nav {
   border-top: solid 2px #0059FF;
 }
 
 .bg-white {
-  background-color: #FFFFFF;
+  background-color: white;
 }
 
 .active a {
@@ -56,6 +65,19 @@ nav {
   color: #0059FF !important;
 }
 
+.navbar-brand {
+  font-size: 1.75rem;
+}
+
+.brand-subtitle {
+  color: gray;
+}
+
+
+/* *********************************** */
+/*                 HEADER              */
+/* *********************************** */
+
 .email-link {
   color: #0059FF;
   text-decoration:none !important;
@@ -63,24 +85,6 @@ nav {
 
 .email-link:hover {
   color: blue;
-}
-
-.navbar-brand {
-  font-size: 1.75rem;
-
-}
-
-.brand-subtitle {
-  color: gray;
-}
-
-.large-text {
-  font-size: 2.82rem;
-  font-weight: 500;
-}
-
-.medium-text {
-  font-size: 1.625rem;
 }
 
 .header {
@@ -96,6 +100,10 @@ nav {
   overflow: hidden;
 }
 
+/* *********************************** */
+/*               PROJECTS              */
+/* *********************************** */
+
 .projects .visual {
   height: 100vh;
   padding-top: 120px;
@@ -108,18 +116,13 @@ nav {
   width: 100%;
 }
 
-.about-me .visual img {
-  margin: 0px;
-  width: 100%;
-}
-
 .description {
   padding-top: 100px;
   padding-left: 20px;
   height: 100vh;
 }
 
-.project-title {
+.project-title, .articles-sec-title {
   font-size: 3.2rem;
   font-weight: 500;
 }
@@ -133,9 +136,43 @@ nav {
   min-width: 120px;
 }
 
+/* *********************************** */
+/*               ARTICLES              */
+/* *********************************** */
+
+
+.articles-sec-title {
+  text-align: center;
+}
+
+.article-sec-div {
+  padding-top: 100px;
+}
+
+.article-sec-div .article-list {
+  padding-top: 40px;
+}
+
+
+
+/* *********************************** */
+/*              ABOUT ME               */
+/* *********************************** */
+
+.about-me .visual img {
+  margin: 0px;
+  height: 80.2%;
+}
+
+
+/* *********************************** */
+/*                FOOTER               */
+/* *********************************** */
+
 .footer-div {
   padding-top: 20px;
   background-color: gray;
+  margin: 0px;
 }
 
 .footer-links a {
@@ -150,3 +187,8 @@ nav {
 .bottom-link {
   margin-right: 20px;
 }
+
+
+/* *********************************** */
+/*            RESPONSIVE               */
+/* *********************************** */
