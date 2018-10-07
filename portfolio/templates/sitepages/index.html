@@ -97,14 +97,39 @@
 
   <section id="about-me" class="about-me last-section">
     <div class="row">
-      <div class="col-md-6 description">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 description">
+          <h2 class="about-title">{% trans "About Me" %}</h2>
+
+          <div class="about-text-div">
+            <p class="about-text-p">{% blocktrans with 'LingoDream' as site_name %}
+              Having deployed my first website in high school, I've always been
+              passionate about the Internet and the Web.
+              While in university, I created a startup called
+              <a href="#project-1" class="project-1-link smooth-scroll">
+              {{site_name}}</a> to help people learn languages.{% endblocktrans %}
+            </p>
+            <p class="about-text-p">{% blocktrans %}
+              In addition to excelling in Python,
+              Django, Javascript, React, and PostgreSQL, I have extensive
+              experience with cloud platforms including Amazon Web Services
+              (AWS), Heroku, Digital Ocean, and Microsoft Azure as well as
+              ReSTful APIs such as email providers, translation services,
+              and payment gateways.{% endblocktrans %}
+            </p>
+            <p class="about-text-p">
+            {% blocktrans %}Curiosity is my biggest source of joy.
+              I am constantly hungry for new things to learn.{% endblocktrans %}
+            </p>
+          </div>
 
         <div class="social-outlets">
-
+            <a href="https://www.linkedin.com/in/zilong-li/?locale=en_US" target="_blank" class="social-link-a"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/technolingo" target="_blank" class="social-link-a padleft"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://stackoverflow.com/story/zilongli" target="_blank" class="social-link-a padleft"><i class="fab fa-stack-overflow"></i> StackOverflow</a>
+            <a href="https://www.quora.com/profile/Zilong-Li-5" target="_blank" class="social-link-a padleft"><i class="fab fa-quora"></i> Quora</a>
+            <a href="https://twitter.com/TechnoLingo" target="_blank" class="social-link-a padleft"><i class="fab fa-twitter"></i> Twitter</a>
         </div>
-      </div>
-      <div class="col-md-6 visual">
-        
       </div>
     </div>
   </section>

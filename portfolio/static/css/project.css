@@ -13,12 +13,12 @@ html, body {
 }
 .middle-section {
   height: 100vh;
-  border-top: 1px solid gray;
+  border-top: 2px solid gray;
 }
 
 .last-section {
-  height: 92vh;
-  border-top: 1px solid gray;
+  height: 91vh;
+  border-top: 2px solid gray;
 }
 
 ::selection {
@@ -122,7 +122,7 @@ nav {
   height: 100vh;
 }
 
-.project-title, .articles-sec-title {
+.project-title, .articles-sec-title, .about-title {
   font-size: 3.2rem;
   font-weight: 500;
 }
@@ -159,11 +159,36 @@ nav {
 /*              ABOUT ME               */
 /* *********************************** */
 
-.about-me .visual img {
-  margin: 0px;
-  height: 80.2%;
+.about-title {
+  text-align: center;
 }
 
+.about-text-div {
+  padding-top: 40px;
+  font-size: 1.2rem;
+}
+
+.project-1-link {
+  color: black;
+}
+
+.social-outlets {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.social-outlets a {
+  display: inline-block;
+  color: gray;
+}
+
+.social-outlets a:hover {
+  color: #0059FF;
+}
+
+.social-outlets a.padleft {
+  padding-left: 10px;
+}
 
 /* *********************************** */
 /*                FOOTER               */
@@ -188,6 +213,9 @@ nav {
   margin-right: 20px;
 }
 
+/* .bottom-link.email {
+  color: #0059FF;
+} */
 
 /* *********************************** */
 /*            RESPONSIVE               */

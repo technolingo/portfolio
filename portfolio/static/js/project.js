@@ -31,4 +31,7 @@ $(document).ready(function() {
     window.scrollTo(0,0);
   });
 
+  // console msg
+  console.log('%c Hi, I could be working for you! hi@zilongli.com ', 'background: #0059FF; color: #FFFFFF');
+
 }); // dom ready
