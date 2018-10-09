@@ -2,136 +2,184 @@
 
 {% block content %}
 
-  <section id="header" class="header first-section">
-    <h1 class="large-text">{% trans "Hi, I'm Zilong, a full-stack web developer." %}</h1>
-    <p class="medium-text">{% trans "I build, deploy, and optimise scalable full-stack web applications." %}</p>
-    <p class="medium-text">{% trans "I LOVE Python, Javascript, and Game of Thrones!" %} 🐺</p>
-    <p class="medium-text">{% trans "Say hello" %}: <a class="email-link" href="mailto:hi@zilongli.com">hi@zilongli.com</a></p>
-    <div class="scroll-down-div">
-      <a class="scroll-down smooth-scroll" href="#project-1">
-        <svg class="clickable" version="1.0" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <polygon points="0.645,10.383 16,23.871 31.355,10.383 29.375,8.129 16,19.878 2.625,8.129 "></polygon></svg>
-      </a>
+<div class="container">
+  <div class="i18n-links float-xs-right">
+    <a href="" data="en" class="active">EN</a>
+    <a href="/zhs/" data="zhs">简</a>
+    <a href="/de/" data="de">DE</a>
+    <a href="/zht/" data="zht">繁</a>
+    <a href="/fr/" data="fr">FR</a>
+    <a href="/ko/" data="ko">한</a>
+    <a href="/es/" data="es">ES</a>
+  </div>
+</div>
+
+<section id="header" class="header first-section">
+  <h1 class="large-text">{% trans "Hi, I'm Zilong, a full-stack web developer." %}</h1>
+  <p class="medium-text">{% trans "I build, deploy, and optimise scalable full-stack web applications." %}</p>
+  <p class="medium-text">{% blocktrans %}I LOVE Python, Javascript, and <em>Game of Thrones</em>!{% endblocktrans %} 🐺</p>
+  <p class="medium-text">{% trans "Say hello" %}: <a class="email-link" href="mailto:hi@zilongli.com">hi@zilongli.com</a></p>
+  <div class="scroll-down-div">
+    <a class="scroll-down smooth-scroll" href="#project-1">
+      <svg class="clickable" version="1.0" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <polygon points="0.645,10.383 16,23.871 31.355,10.383 29.375,8.129 16,19.878 2.625,8.129 "></polygon></svg>
+    </a>
+  </div>
+</section>
+
+<section id="project-1" class="projects middle-section">
+  <div class="row">
+    <div class="col-md-7 visual">
+      <a href="https://www.lingodream.com/" target="_blank"><img src="{% static 'images/projects/lingodream_screenshot.png' %}" alt=""></a>
     </div>
-  </section>
+    <div class="col-md-5 description">
+      <h2 class="project-title">LingoDream</h2>
+      <p class="project-text">{% trans "A web app that helps language learners read texts in foreign languages." %}</p>
+      <p class="technologies"><strong>{% trans "Frontend" %}: </strong>
+        <span class="badge badge-info">Javascript</span>
+        <span class="badge badge-info">jQuery</span>
+        <span class="badge badge-info">Bootstrap</span>
+        <span class="badge badge-info">HTML5</span>
+        <span class="badge badge-info">CSS3</span>
+        <span class="badge badge-info">Ajax</span>
+      </p>
+      <p class="technologies"><strong>{% trans "Backend" %}: </strong>
+        <span class="badge badge-primary">Python</span>
+        <span class="badge badge-primary">Django</span>
+        <span class="badge badge-primary">PostgreSQL</span>
+        <span class="badge badge-primary">ReSTful APIs</span>
+        <span class="badge badge-primary">RegExp</span>
+        <span class="badge badge-primary">Django-Rest-Framework</span>
+        <span class="badge badge-primary">Email Integration</span>
+        <span class="badge badge-primary">Payment Integration</span>
+        <span class="badge badge-primary">Ruby</span>
+        <span class="badge badge-primary">Token Authentication</span>
+        <span class="badge badge-primary">Web Scraping</span>
+        <span class="badge badge-primary">Unit Testing</span>
+      </p>
+      <p class="technologies"><strong>{% trans "Cloud" %}: </strong>
+        <span class="badge badge-success">Amazon Web Services (AWS)</span>
+        <span class="badge badge-success">Azure Cognitive Services</span>
+        <span class="badge badge-success">Content Delivery Networks (CDN)</span>
+        <span class="badge badge-success">Heroku</span>
+      </p>
+      <p class="technologies"><strong>{% trans "Other" %}: </strong>
+        <span class="badge badge-secondary">Chrome Extension</span>
+        <span class="badge badge-secondary">Firefox Add-on</span>
+        <span class="badge badge-secondary">Command Line</span>
+        <span class="badge badge-secondary">Linux</span>
+        <span class="badge badge-secondary">Atom</span>
+        <span class="badge badge-secondary">VS Code</span>
+        <span class="badge badge-secondary">PyCharm</span>
+        <span class="badge badge-secondary">Docker</span>
+        <span class="badge badge-secondary">Git</span>
+      </p>
+      <a class="btn btn-outline-primary project-link" href="https://www.lingodream.com/" target="_blank">{% trans "Teleport" %}</a>
+    </div>
+  </div>
+</section>
 
-  <section id="project-1" class="projects middle-section">
-    <div class="row">
-      <div class="col-md-7 visual">
-        <a href="https://www.lingodream.com/" target="_blank"><img src="{% static 'images/projects/lingodream_screenshot.png' %}" alt=""></a>
+<section id="project-2" class="projects middle-section">
+  <div class="row">
+    <div class="col-md-5 description">
+      <h2 class="project-title">EmoCards</h2>
+      <p class="project-text">{% trans "A ReactJS + Django App that trains people to recognise emotions displayed in facial expressions." %}</p>
+
+      <p class="technologies"><strong>{% trans "Frontend" %}: </strong>
+        <span class="badge badge-info">React</span>
+        <span class="badge badge-info">Javascript</span>
+        <span class="badge badge-info">ES6</span>
+        <span class="badge badge-info">Redux</span>
+        <span class="badge badge-info">HTML5</span>
+        <span class="badge badge-info">CSS3</span>
+      </p>
+      <p class="technologies"><strong>{% trans "Backend" %}: </strong>
+        <span class="badge badge-primary">Python</span>
+        <span class="badge badge-primary">Django</span>
+        <span class="badge badge-primary">PostgreSQL</span>
+        <span class="badge badge-primary">ReSTful APIs</span>
+        <span class="badge badge-primary">Django-Rest-Framework</span>
+        <span class="badge badge-primary">Unit Testing</span>
+      </p>
+      <p class="technologies"><strong>{% trans "Cloud" %}: </strong>
+        <span class="badge badge-success">Digital Ocean</span>
+        <span class="badge badge-success">Google Cloud Platform (GCP)</span>
+      </p>
+      <p class="technologies"><strong>{% trans "Other" %}: </strong>
+        <span class="badge badge-secondary">Command Line</span>
+        <span class="badge badge-secondary">Linux</span>
+        <span class="badge badge-secondary">Atom</span>
+        <span class="badge badge-secondary">Git</span>
+      </p>
+      <a class="btn btn-outline-primary project-link" href="" target="_blank">{% trans "Demo" %}</a>
+      <a class="btn btn-outline-secondary project-link" href="" target="_blank">{% trans "GitHub" %}</a>
+    </div>
+    <div class="col-md-7 visual">
+      <a href="https://www.lingodream.com/" target="_blank"><img src="{% static 'images/projects/lingodream_screenshot.png' %}" alt=""></a>
+    </div>
+  </div>
+</section>
+
+<section id="articles" class="articles middle-section">
+  <div class="row">
+    <div class="col-md-2 "></div>
+    <div class="col-md-8 article-sec-div">
+      <h2 class="articles-sec-title">{% trans "Articles" %}</h2>
+
+      <div class="article-list">
+        <h5><a href="#">Django-Compressor + Whilenoise + AWS Cloudfront - The Ultimate Guide</a></h5>
+        <h5><a href="#">Quick Guide on Token Authentication in Django-Rest-Framework</a></h5>
+        <h5><a href="#">Microsoft Azure - Bing Translator API Secure Frontend Integration Guide</a></h5>
+        <h5><a href="#">Microsoft Azure - Bing Web Search API Backend Integration Guide</a></h5>
+        <h5><a href="#">i18n - How to Internationalise Your Django Web App the Right Way</a></h5>
+        <h5><a href="#">Why I Use AWS Route53 - One Domain Registrar to Rule Them All</a></h5>
+        <h5><a href="#">Going Serverless - Create Your First AWS Lambda Function</a></h5>
       </div>
-      <div class="col-md-5 description">
-        <h2 class="project-title">LingoDream</h2>
-        <p class="project-text">{% trans "A web app that helps language learners read texts in foreign languages." %}</p>
-        <p class="technologies"><strong>{% trans "Frontend" %}: </strong>
-          <span class="badge badge-info">HTML5</span>
-          <span class="badge badge-info">CSS3</span>
-          <span class="badge badge-info">Javascript</span>
-          <span class="badge badge-info">jQuery</span>
-          <span class="badge badge-info">Bootstrap</span>
-          <span class="badge badge-info">Ajax</span>
-        </p>
-        <p class="technologies"><strong>{% trans "Backend" %}: </strong>
-          <span class="badge badge-primary">Python</span>
-          <span class="badge badge-primary">Django</span>
-          <span class="badge badge-primary">PostgreSQL</span>
-          <span class="badge badge-primary">ReSTful APIs</span>
-          <span class="badge badge-primary">RegExp</span>
-          <span class="badge badge-primary">Django-Rest-Framework</span>
-          <span class="badge badge-primary">Email Integration</span>
-          <span class="badge badge-primary">Payment Integration</span>
-          <span class="badge badge-primary">Ruby</span>
-          <span class="badge badge-primary">Token Authentication</span>
-          <span class="badge badge-primary">Web Scraping</span>
-          <span class="badge badge-primary">Unit Testing</span>
-        </p>
-        <p class="technologies"><strong>{% trans "Cloud" %}: </strong>
-          <span class="badge badge-success">Amazon Web Services (AWS)</span>
-          <span class="badge badge-success">Azure Cognitive Services</span>
-          <span class="badge badge-success">Content Delivery Networks (CDN)</span>
-          <span class="badge badge-success">Heroku</span>
-        </p>
-        <p class="technologies"><strong>{% trans "Other" %}: </strong>
-          <span class="badge badge-secondary">Chrome Extension</span>
-          <span class="badge badge-secondary">Firefox Add-on</span>
-          <span class="badge badge-secondary">Command Line</span>
-          <span class="badge badge-secondary">Linux</span>
-          <span class="badge badge-secondary">Atom</span>
-          <span class="badge badge-secondary">VS Code</span>
-          <span class="badge badge-secondary">PyCharm</span>
-          <span class="badge badge-secondary">Docker</span>
-          <span class="badge badge-secondary">Git</span>
-        </p>
-        <a class="btn btn-outline-primary project-link" href="https://www.lingodream.com/" target="_blank">{% trans "Teleport" %}</a>
+
+      <div class="blog-link-div">
+        <a href="#" class="btn btn-outline-secondary blog-link" target="_blank">{% trans "View All" %}</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="project-2" class="projects middle-section">
-    <div class="row">
-      <div class="col-md-5 description">
-        <h2 class="project-title">React Flashcard App</h2>
-        <p class="project-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-      <div class="col-md-7 visual">
-        <a href="https://www.lingodream.com/" target="_blank"><img src="{% static 'images/projects/lingodream_screenshot.png' %}" alt=""></a>
-      </div>
-    </div>
-  </section>
+<section id="about-me" class="about-me last-section">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 description">
+        <h2 class="about-title">{% trans "About Me" %}</h2>
 
-  <section id="articles" class="articles middle-section">
-    <div class="row">
-      <div class="col-md-2 "></div>
-      <div class="col-md-8 article-sec-div">
-        <h2 class="articles-sec-title">Featured Articles</h2>
-
-        <div class="article-list">
-          <h5><a href="#">Django-Compressor+Whilenoise+AWS Cloudfront - The Ultimate Guide</a></h5>
-          <h5><a href="#">Some Other Article Something Random Useful</a></h5>
-          <h5><a href="#">Some Other Article Something Random Useful</a></h5>
-          <h5><a href="#">Some Other Article Something Random Useful</a></h5>
+        <div class="about-text-div">
+          <p class="about-text-p">{% blocktrans with 'LingoDream' as site_name %}
+            Having deployed my first website in high school, I've always been
+            passionate about the Internet and the Web.
+            While in university, I created a startup called
+            <a href="#project-1" class="project-1-link smooth-scroll">
+            {{site_name}}</a> to help people learn languages.{% endblocktrans %}
+          </p>
+          <p class="about-text-p">{% blocktrans %}
+            In addition to excelling in Python,
+            Django, Javascript, React, and PostgreSQL, I have extensive
+            experience with cloud platforms including Amazon Web Services
+            (AWS), Heroku, Digital Ocean, and Microsoft Azure as well as
+            ReSTful APIs such as email providers, translation services,
+            and payment gateways.{% endblocktrans %}
+          </p>
+          <p class="about-text-p">
+          {% blocktrans %}Curiosity is my biggest source of joy.
+            I am constantly hungry for new things to learn.{% endblocktrans %}
+          </p>
         </div>
+
+      <div class="social-outlets">
+          <a href="https://www.linkedin.com/in/zilong-li/?locale=en_US" target="_blank" class="social-link-a"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/technolingo" target="_blank" class="social-link-a padleft"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://stackoverflow.com/story/zilongli" target="_blank" class="social-link-a padleft"><i class="fab fa-stack-overflow"></i> StackOverflow</a>
+          <a href="https://www.quora.com/profile/Zilong-Li-5" target="_blank" class="social-link-a padleft"><i class="fab fa-quora"></i> Quora</a>
+          <a href="https://twitter.com/TechnoLingo" target="_blank" class="social-link-a padleft"><i class="fab fa-twitter"></i> Twitter</a>
       </div>
     </div>
-  </section>
-
-  <section id="about-me" class="about-me last-section">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8 description">
-          <h2 class="about-title">{% trans "About Me" %}</h2>
-
-          <div class="about-text-div">
-            <p class="about-text-p">{% blocktrans with 'LingoDream' as site_name %}
-              Having deployed my first website in high school, I've always been
-              passionate about the Internet and the Web.
-              While in university, I created a startup called
-              <a href="#project-1" class="project-1-link smooth-scroll">
-              {{site_name}}</a> to help people learn languages.{% endblocktrans %}
-            </p>
-            <p class="about-text-p">{% blocktrans %}
-              In addition to excelling in Python,
-              Django, Javascript, React, and PostgreSQL, I have extensive
-              experience with cloud platforms including Amazon Web Services
-              (AWS), Heroku, Digital Ocean, and Microsoft Azure as well as
-              ReSTful APIs such as email providers, translation services,
-              and payment gateways.{% endblocktrans %}
-            </p>
-            <p class="about-text-p">
-            {% blocktrans %}Curiosity is my biggest source of joy.
-              I am constantly hungry for new things to learn.{% endblocktrans %}
-            </p>
-          </div>
-
-        <div class="social-outlets">
-            <a href="https://www.linkedin.com/in/zilong-li/?locale=en_US" target="_blank" class="social-link-a"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/technolingo" target="_blank" class="social-link-a padleft"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://stackoverflow.com/story/zilongli" target="_blank" class="social-link-a padleft"><i class="fab fa-stack-overflow"></i> StackOverflow</a>
-            <a href="https://www.quora.com/profile/Zilong-Li-5" target="_blank" class="social-link-a padleft"><i class="fab fa-quora"></i> Quora</a>
-            <a href="https://twitter.com/TechnoLingo" target="_blank" class="social-link-a padleft"><i class="fab fa-twitter"></i> Twitter</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 {% endblock content %}

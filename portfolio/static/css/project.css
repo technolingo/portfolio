@@ -8,8 +8,14 @@ html, body {
   margin: 0px;
   padding: 0px;
 }
+
+html, a.navbar-brand, h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 .first-section {
-  height: 80vh;
+  height: 77vh;
 }
 .middle-section {
   height: 100vh;
@@ -32,14 +38,26 @@ html, body {
 
 .large-text {
   font-size: 2.82rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .medium-text {
+  margin-top: 1rem;
   font-size: 1.625rem;
 }
 
+.i18n-links {
+  float: right !important;
+}
 
+.i18n-links a {
+  color: gray;
+  margin-left: 10px;
+}
+
+.i18n-links a.active {
+  color: black;
+}
 
 /* *********************************** */
 /*             NAVIGATION              */
@@ -66,7 +84,8 @@ nav {
 }
 
 .navbar-brand {
-  font-size: 1.75rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .brand-subtitle {
@@ -151,9 +170,26 @@ nav {
 
 .article-sec-div .article-list {
   padding-top: 40px;
+  text-align: center;
 }
 
+.article-sec-div .article-list a {
+  color: gray;
+  text-decoration: none;
+}
 
+.article-sec-div .article-list a:hover {
+  color: black;
+}
+
+.blog-link-div {
+  text-align: center;
+}
+
+.blog-link {
+  margin-top: 30px;
+  min-width: 120px;
+}
 
 /* *********************************** */
 /*              ABOUT ME               */
