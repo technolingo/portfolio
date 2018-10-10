@@ -2,15 +2,59 @@
 
 {% block content %}
 
-<div class="container">
-  <div class="i18n-links float-xs-right">
-    <a href="" data="en" class="active">EN</a>
-    <a href="/zhs/" data="zhs">简</a>
-    <a href="/de/" data="de">DE</a>
-    <a href="/zht/" data="zht">繁</a>
-    <a href="/fr/" data="fr">FR</a>
-    <a href="/ko/" data="ko">한</a>
-    <a href="/es/" data="es">ES</a>
+<div class="container i18n-container">
+  <div class="i18n-links">
+    {% get_current_language as CURRENT_LANGUAGE %}
+    <span id="currentLangCode" class="d-none">{{CURRENT_LANGUAGE}}</span>
+    <div class="set-lang-form-div">
+      <form action="{% url 'set_language' %}" method="POST">{% csrf_token %}
+        <input type="hidden" name="next" value="/">
+        <input type="hidden" name="language" value="en">
+        <button class="setlang btn btn-link lang-en" type="submit" value="Go" >EN</button>
+      </form>
+    </div>
+    <div class="set-lang-form-div">
+      <form action="{% url 'set_language' %}" method="POST">{% csrf_token %}
+        <input type="hidden" name="next" value="/">
+        <input type="hidden" name="language" value="zh-hans">
+        <button class="setlang btn btn-link lang-zh-hans" type="submit" value="Go">简</button>
+      </form>
+    </div>
+    <div class="set-lang-form-div">
+      <form action="{% url 'set_language' %}" method="POST">{% csrf_token %}
+        <input type="hidden" name="next" value="/">
+        <input type="hidden" name="language" value="de">
+        <button class="setlang btn btn-link lang-de" type="submit" value="Go">DE</button>
+      </form>
+    </div>
+    <div class="set-lang-form-div">
+      <form action="{% url 'set_language' %}" method="POST">{% csrf_token %}
+        <input type="hidden" name="next" value="/">
+        <input type="hidden" name="language" value="zh-hant">
+        <button class="setlang btn btn-link lang-zh-hant" type="submit" value="Go">繁</button>
+      </form>
+    </div>
+    <div class="set-lang-form-div">
+      <form action="{% url 'set_language' %}" method="POST">{% csrf_token %}
+        <input type="hidden" name="next" value="/">
+        <input type="hidden" name="language" value="fr">
+        <button class="setlang btn btn-link lang-fr" type="submit" value="Go">FR</button>
+      </form>
+    </div>
+    <div class="set-lang-form-div">
+      <form action="{% url 'set_language' %}" method="POST">{% csrf_token %}
+        <input type="hidden" name="next" value="/">
+        <input type="hidden" name="language" value="ko">
+        <button class="setlang btn btn-link lang-ko" type="submit" value="Go">한</button>
+      </form>
+    </div>
+    <div class="set-lang-form-div">
+      <form action="{% url 'set_language' %}" method="POST">{% csrf_token %}
+        <input type="hidden" name="next" value="/">
+        <input type="hidden" name="language" value="es">
+        <button class="setlang btn btn-link lang-es" type="submit" value="Go">ES</button>
+      </form>
+    </div>
   </div>
 </div>
 

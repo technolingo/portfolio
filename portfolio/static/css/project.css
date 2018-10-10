@@ -14,26 +14,19 @@ html, a.navbar-brand, h1, h2, h3, h4, h5, h6 {
     Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.first-section {
-  height: 77vh;
-}
-.middle-section {
-  height: 100vh;
-  border-top: 2px solid gray;
-}
-
-.last-section {
-  height: 91vh;
-  border-top: 2px solid gray;
-}
-
 ::selection {
   color: white;
   background: #0059FF; /* WebKit/Blink Browsers */
 }
+
 ::-moz-selection {
   color: white;
   background: #0059FF; /* Gecko Browsers */
+}
+
+.middle-section, .last-section {
+  border-top: 2px solid gray;
+  /* min-height: 100vh; */
 }
 
 .large-text {
@@ -46,17 +39,42 @@ html, a.navbar-brand, h1, h2, h3, h4, h5, h6 {
   font-size: 1.625rem;
 }
 
-.i18n-links {
-  float: right !important;
+.set-lang-form-div {
+  display: inline-block;
+  padding: 0px;
 }
 
-.i18n-links a {
+.setlang.btn.btn-link {
   color: gray;
-  margin-left: 10px;
+  padding-left: 8px;
+  padding-right: 0px;
 }
 
-.i18n-links a.active {
+.setlang.btn.btn-link.active {
   color: black;
+}
+
+@media (min-width: 768px) {
+  .i18n-container {
+    padding-right: 12px;
+  }
+
+  .i18n-links {
+    float: right !important;
+    padding: 0px;
+  }
+
+  .first-section {
+    height: 78vh;
+  }
+
+  .middle-section {
+    height: 100vh;
+  }
+
+  .last-section {
+    height: 91vh;
+  }
 }
 
 /* *********************************** */
@@ -92,6 +110,15 @@ nav {
   color: gray;
 }
 
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  #navbarSupportedContent > ul.navbar-nav {
+    text-align: center;
+  }
+}
 
 /* *********************************** */
 /*                 HEADER              */
@@ -117,6 +144,26 @@ nav {
 .clickable {
   height: 2rem;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .i18n-links {
+    text-align: center;
+    padding: 0px;
+  }
+
+  .large-text {
+    font-size: 2.6rem;
+  }
+
+  .medium-text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .header {
+    padding-top: 100px;
+  }
 }
 
 /* *********************************** */

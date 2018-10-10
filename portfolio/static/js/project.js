@@ -1,5 +1,11 @@
+"use strict";
 $(document).ready(function() {
-  "use strict";
+  // activate current language btn
+  var currentLangCode = $('span#currentLangCode').text();
+  if (currentLangCode.length) {
+    var currentLangBtnSelector = ".setlang.btn.btn-link.lang-" + currentLangCode;
+    $(currentLangBtnSelector).addClass('active');
+  }
 
   // auto scroll to top after reload
     history.scrollRestoration = "manual";

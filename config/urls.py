@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.conf.urls.i18n import i18n_patterns
 from django.urls import include, path
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -6,14 +7,9 @@ from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="sitepages/index.html"), name="home"),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
-    # User management
-    path(
-        "users/",
-        include("portfolio.users.urls", namespace="users"),
-    ),
+    path('i18n/', include('django.conf.urls.i18n')),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(
@@ -41,3 +37,10 @@ if settings.DEBUG:
         ),
         path("500/", default_views.server_error),
     ]
+
+# i18n URLs
+urlpatterns += i18n_patterns(
+    path("", TemplateView.as_view(template_name="sitepages/index.html"), name="home"),
+    # Set it to False to remove 'en' prefix for English
+    prefix_default_language=False
+)
