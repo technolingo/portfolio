@@ -24,9 +24,20 @@ html, a.navbar-brand, h1, h2, h3, h4, h5, h6 {
   background: #0059FF; /* Gecko Browsers */
 }
 
+.first-section {
+  height: 78vh;
+}
+
+.middle-section {
+  height: 100vh;
+}
+
+.last-section {
+  height: 91vh;
+}
+
 .middle-section, .last-section {
   border-top: 2px solid gray;
-  /* min-height: 100vh; */
 }
 
 .large-text {
@@ -37,6 +48,15 @@ html, a.navbar-brand, h1, h2, h3, h4, h5, h6 {
 .medium-text {
   margin-top: 1rem;
   font-size: 1.625rem;
+}
+
+.i18n-container {
+  padding-right: 12px;
+}
+
+.i18n-links {
+  float: right;
+  padding: 0px;
 }
 
 .set-lang-form-div {
@@ -54,28 +74,6 @@ html, a.navbar-brand, h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 
-@media (min-width: 768px) {
-  .i18n-container {
-    padding-right: 12px;
-  }
-
-  .i18n-links {
-    float: right !important;
-    padding: 0px;
-  }
-
-  .first-section {
-    height: 78vh;
-  }
-
-  .middle-section {
-    height: 100vh;
-  }
-
-  .last-section {
-    height: 91vh;
-  }
-}
 
 /* *********************************** */
 /*             NAVIGATION              */
@@ -110,15 +108,6 @@ nav {
   color: gray;
 }
 
-@media (max-width: 767px) {
-  .navbar-brand {
-    font-size: 1.5rem;
-  }
-
-  #navbarSupportedContent > ul.navbar-nav {
-    text-align: center;
-  }
-}
 
 /* *********************************** */
 /*                 HEADER              */
@@ -146,46 +135,27 @@ nav {
   overflow: hidden;
 }
 
-@media (max-width: 767px) {
-  .i18n-links {
-    text-align: center;
-    padding: 0px;
-  }
-
-  .large-text {
-    font-size: 2.6rem;
-  }
-
-  .medium-text {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-  }
-
-  .header {
-    padding-top: 100px;
-  }
-}
 
 /* *********************************** */
 /*               PROJECTS              */
 /* *********************************** */
 
-.projects .visual {
-  height: 100vh;
+.projects .row .visual {
+  width: 58%;
   padding-top: 120px;
   padding-left: 0px;
   padding-right: 20px;
 }
 
-.projects .visual img {
-  margin: 0px;
-  width: 100%;
-}
-
-.description {
+.projects .row .description {
+  width: 42%;
   padding-top: 100px;
   padding-left: 20px;
-  height: 100vh;
+}
+
+.projects .row .visual img {
+  margin: 0px;
+  width: 100%;
 }
 
 .project-title, .articles-sec-title, .about-title {
@@ -202,6 +172,15 @@ nav {
   min-width: 120px;
 }
 
+span.badge {
+  font-weight: 600;
+}
+
+.badge-primary {
+  /* background-color: #0059FF; */
+}
+
+
 /* *********************************** */
 /*               ARTICLES              */
 /* *********************************** */
@@ -212,7 +191,7 @@ nav {
 }
 
 .article-sec-div {
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 .article-sec-div .article-list {
@@ -221,6 +200,7 @@ nav {
 }
 
 .article-sec-div .article-list a {
+  line-height: 2rem;
   color: gray;
   text-decoration: none;
 }
@@ -241,6 +221,10 @@ nav {
 /* *********************************** */
 /*              ABOUT ME               */
 /* *********************************** */
+
+.about-me .description {
+  padding-top: 70px;
+}
 
 .about-title {
   text-align: center;
@@ -296,10 +280,136 @@ nav {
   margin-right: 20px;
 }
 
-/* .bottom-link.email {
-  color: #0059FF;
-} */
 
 /* *********************************** */
 /*            RESPONSIVE               */
 /* *********************************** */
+
+/* iPad Landscape */
+@media (max-width: 1024.98px) {
+  .header {
+    padding-top: 200px;
+  }
+
+  .first-section {
+    height: 82vh;
+  }
+
+  .project-title, .articles-sec-title, .about-title {
+    font-size: 2.8rem;
+  }
+
+  .project-text {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    padding-top: 60px;
+    padding-left: 20px;
+  }
+
+  .project-link {
+    margin-top: 18px;
+  }
+
+  .projects .row .visual {
+    width: 50%;
+    padding-top: 120px;
+    padding-left: 0px;
+    padding-right: 20px;
+  }
+
+  .projects .row .description {
+    width: 50%;
+    padding-top: 100px;
+    padding-left: 20px;
+  }
+
+  .projects .row .visual img {
+    margin: 0px;
+    width: 100%;
+  }
+
+  .middle-section {
+    height: 80vh;
+  }
+
+  .last-section {
+    height: 80vh;
+  }
+}
+
+
+/* iPad Portrait */
+@media (max-width: 768.98px) {
+  .header {
+    padding-top: 260px;
+  }
+
+  .large-text {
+    font-size: 3.2rem;
+  }
+
+  .medium-text {
+    font-size: 1.8rem;
+  }
+
+  .first-section {
+    height: 87vh;
+  }
+
+  .middle-section {
+    height: 100vh;
+  }
+
+  .last-section {
+    height: 91vh;
+  }
+
+  .about-text-div p {
+    text-align: center;
+  }
+}
+
+
+/* Collapsed Navbar */
+@media (max-width: 767.98px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  #navbarSupportedContent > ul.navbar-nav {
+    text-align: center;
+  }
+
+  .i18n-links {
+    float: none;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .large-text {
+    font-size: 2.6rem;
+  }
+
+  .medium-text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .header {
+    padding-top: 100px;
+  }
+}
+
+
+/* iPhone 6/7/8 Plus */
+@media (min-width: 414px) {
+
+}
+
+
+/* iPhone 6/7/8/X */
+@media (min-width: 375px) {
+
+}
