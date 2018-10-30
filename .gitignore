@@ -282,3 +282,7 @@ pip-selfcheck.json
 portfolio/media/
 
 .pytest_cache/
+
+
+### Atom Editor
+package.json
